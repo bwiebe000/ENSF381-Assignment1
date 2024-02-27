@@ -11,6 +11,7 @@ Description : page to login to our webpage
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
 <!-- Add meta tags, title, and link to styles.css here -->
 </head>
 <body>
@@ -21,12 +22,13 @@ Description : page to login to our webpage
 </header>
 
 <div>
-    <a href="./index.html">Home</a><br>
+    <a href="./index.html">Home</a>
     <a href="./products.html">Products</a><br>
     <a href="./contact.html">Contacts</a><br>
+    <a href="./login.html">Login</a><br>
 <!-- Navigation links go here -->
 </div>
-<main>
+<main class="login-main">
     <form action="#" method="post">
         <fieldset>
             <legend>Login Information</legend>
@@ -38,7 +40,7 @@ Description : page to login to our webpage
             <input type="password" id="Password" name="Password"><br>
             <input type="submit" value="Login"><br>
             Don't have an account yet:<br>
-            <a href="signup.html">Sign Up</a>
+            <a class="signup-link" href="signup.html">Sign Up</a>
         </fieldset>
 </main>
 <footer>

@@ -1,0 +1,156 @@
+/* Header */
+header {
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+header img {
+    margin-right: auto;
+}
+
+/* Company Name */
+header h1 {
+    margin-left: auto;
+}
+
+/* Navigation Bar */
+div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: #333;
+}
+
+/* Navigation Links */
+div a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Shop Now Button */
+.btn-shop-now {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    text-decoration: none;
+}
+
+/* Customer Review Section */
+.customer-reviews {
+    display: flex;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Customer Review Section - Reviews */
+.customer-reviews .review {
+    background-color: #ddd; /* This line ensures the background color is applied to individual reviews */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+    color: white;
+    text-align: center;
+}
+
+.contact-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+/* Contact Methods */
+.contact-method {
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+/* Social Media Links Hover Effect */
+.contact-method a:hover {
+    color: #007BFF;
+}
+
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    display: block;
+    margin: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+}
+
+form input[type="submit"]:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+.signup-link {
+    color: #007BFF;
+    margin: 10px;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
