@@ -156,19 +156,51 @@ form input[type="submit"]:hover {
 }
  /* Add your CSS styling here */
 
+/* styles.css */
+
+/* Product List Section */
 .product-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    background-color: #ddd;
     padding: 20px;
+    margin: 20px;
 }
+
+/* Product Container */
 .product {
-    width: 20%;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
 }
+
+/* Product Image */
 .product img {
     max-width: 100%;
-    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Price Text */
+.product p {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Add to Cart Button */
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Display Price and Button Vertically */
+.product p, .product button {
+    display: block;
 }
