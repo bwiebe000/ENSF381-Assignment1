@@ -1,3 +1,13 @@
+/* styles.css
+
+=========================================================
+Name        : styles.css
+Assignment  : Assignment 2
+Author(s)   : Brayden Wiebe, Nader Naboulsi
+Submission  : Feb 26, 2024
+Description : css styling code for the whole website
+=========================================================
+*/
 /* Header */
 header {
     background-color: #333;
@@ -19,7 +29,7 @@ header h1 {
 }
 
 /* Navigation Bar */
-div {
+.div {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -27,7 +37,7 @@ div {
 }
 
 /* Navigation Links */
-div a {
+.div a {
     padding: 10px 20px;
     color: white;
     text-decoration: none;
@@ -69,7 +79,7 @@ div a {
 
 /* Customer Review Section - Reviews */
 .customer-reviews .review {
-    background-color: #ddd; /* This line ensures the background color is applied to individual reviews */
+    background-color: #ddd; 
 }
 
 /* Footer */
@@ -83,22 +93,20 @@ footer {
 
 .contact-main {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     padding: 20px;
     margin: 20px;
     background-color: #ddd;
     border-radius: 10px;
 }
 
-/* Contact Methods */
 .contact-method {
     background-color: #ddd;
-    padding: 0px;
-    margin: 0px;
+    padding: 20px;
+    margin: 20px;
     border-radius: 10px;
+    width: 80%; 
 }
-
 /* Social Media Links Hover Effect */
 .contact-method a:hover {
     color: #007BFF;
