@@ -37,7 +37,6 @@ div a {
 .main {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 /* About Us Section */
@@ -62,6 +61,7 @@ div a {
 .customer-reviews {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
@@ -154,9 +154,6 @@ form input[type="submit"]:hover {
 .signup-link:hover {
     text-decoration: underline;
 }
- /* Add your CSS styling here */
-
-/* styles.css */
 
 /* Product List Section */
 .product-main {
