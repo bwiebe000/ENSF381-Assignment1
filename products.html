@@ -16,19 +16,17 @@ Description : product page for our website
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Listing</title>
 </head>
-
-
 <body>
-    <header>
-        <img src="./images/2079333.webp" alt="Website Logo" height="400" width="400">
-        <h1>TEZNA</h1>
-    </header>
-    <div class="div"> 
-        <a href="./index.html">Home</a>
-        <a href="./products.html">Products</a><br>
-        <a href="./contact.html">Contacts</a><br>
-        <a href="./login.html">Login</a><br>
-    </div>
+<header>
+    <img src="./images/2079333.webp" alt="Website Logo" height="400" width="400">
+    <h1>TEZNA</h1>
+</header>
+<div class="div">
+    <a href="./index.html">Home</a>
+    <a href="./products.html">Products</a><br>
+    <a href="./contact.html">Contacts</a><br>
+    <a href="./login.html">Login</a><br>
+</div>
     <main>
     <table>
         <tr>
@@ -105,9 +103,59 @@ Description : product page for our website
         </tr>
     </table>
     </main>
+    <h1 class="h1"> Shopping Cart</h1>
+    <div id="cart">
+        <!-- Cart display will be inserted here dynamically -->
+    </div>
     <footer>
         &copy; 2024 TEZNA. All rights reserved.
     </footer>
+    <script>
+        const addToCartButtons = document.querySelectorAll('.product button');
+    
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+    
+        function addToCart(event) {
+            const productDiv = event.target.parentElement;
+            const productName = productDiv.querySelector('h2').textContent;
+            const unitPrice = parseFloat(productDiv.querySelector('p').textContent.replace('$', ''));
+            let quantity = 1;
+    
+            const existingCartItem = document.querySelector(`#cart .cart-item[data-name="${productName}"]`);
+            if (existingCartItem) {
+                quantity = parseInt(existingCartItem.querySelector('.quantity').textContent) + 1;
+                existingCartItem.querySelector('.quantity').textContent = quantity;
+            } else {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.setAttribute('data-name', productName);
+                cartItem.innerHTML = `
+                    <p>${productName}</p>
+                    <p class="unit-price">$${unitPrice.toFixed(2)}</p>
+                    <p class="quantity">${quantity}</p>
+                    <button class="remove-button" onclick="removeFromCart(this)">Remove</button>
+                `;
+                document.getElementById('cart').appendChild(cartItem);
+            }
+    
+            alert(`${productName} has been added to the cart.`);
+        }
+    
+        function removeFromCart(button) {
+            const cartItem = button.parentElement;
+            let quantity = parseInt(cartItem.querySelector('.quantity').textContent);
+    
+            if (quantity > 1) {
+                quantity--;
+                cartItem.querySelector('.quantity').textContent = quantity;
+            } else {
+                cartItem.remove();
+            }
+        }
+    </script>
+
 </body>
 </html>
 
