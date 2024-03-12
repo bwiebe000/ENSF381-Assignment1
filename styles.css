@@ -2,88 +2,75 @@
 
 =========================================================
 Name        : styles.css
-Assignment  : Assignment 2
+Assignment  : Assignment 3
 Author(s)   : Brayden Wiebe, Nader Naboulsi
-Submission  : Feb 26, 2024
+Submission  : March 11, 2024
 Description : css styling code for the whole website
 =========================================================
 */
-/* Header */
-header {
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+.header {
     background-color: #333;
     padding: 20px;
-    margin: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
-/* Logo */
-header img {
-    margin-right: auto;
+.company-name {
+    color: white; /* Adjust text color for better visibility */
+    margin-right: 20px;
 }
 
-/* Company Name */
-header h1 {
-    margin-left: auto;
-}
-
-/* Navigation Bar */
-.div {
+/* Navigation Styles */
+nav {
+	background-color: #333;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    background-color: #333;
+    justify-content: space-between;
+    width: 100%; 
 }
 
-/* Navigation Links */
-.div a {
+.nav-link {
     padding: 10px 20px;
     color: white;
     text-decoration: none;
 }
 
-/* Main */
-.main {
-    display: flex;
-    flex-direction: column;
+/* Main Content Styles */
+main {
+    padding: 20px;
 }
 
-/* About Us Section */
+/* About Us Section Styles */
 .about-us {
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
-    text-align: center;
 }
 
-/* Shop Now Button */
-.btn-shop-now {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 20px;
-    text-decoration: none;
-}
-
-/* Customer Review Section */
+/* Customer Reviews Section Styles */
 .customer-reviews {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
 }
 
-/* Customer Review Section - Reviews */
-.customer-reviews .review {
-    background-color: #ddd; 
+/* Shop Now Button Styles */
+.shop-now-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
 }
 
-/* Footer */
-footer {
+/* Footer Styles */
+.footer {
     background-color: #333;
     padding: 10px;
     margin: 0;
@@ -91,109 +78,49 @@ footer {
     text-align: center;
 }
 
-.contact-main {
-    display: flex;
-    flex-direction: column;
+/* Product List Section Styles */
+.product-list {
+	background-color: #ddd;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 20px;
     margin: 20px;
-    background-color: #ddd;
-    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-.contact-method {
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    width: 80%; 
-}
-/* Social Media Links Hover Effect */
-.contact-method a:hover {
-    color: #007BFF;
-}
-
-.login-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label {
-    display: block;
-    margin: 10px;
-}
-
-form input[type="text"],
-form input[type="password"] {
-    background-color: #fff;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-form input[type="submit"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin: 10px;
-    opacity: 0.5;
-}
-
-form input[type="submit"]:hover {
-    background-color: #45A049;
-    opacity: 1.0;
-}
-
-.signup-link {
-    color: #007BFF;
-    margin: 10px;
-}
-
-.signup-link:hover {
-    text-decoration: underline;
-}
-
-/* Product List Section */
-.product-main {
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-}
-
-/* Product Container */
+/* Product Styling */
 .product {
     background-color: #f9f9f9;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
+    width: 50%; /* Ensure two products per line with spacing */
     text-align: center;
-    transition: background-color 0.3s ease;
 }
-
-/* Product Image */
+/* Product Container Styles */
+.product-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 .product img {
     max-width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
-/* Price Text */
-.product p {
+.product .price {
     color: #007BFF;
     font-weight: bold;
 }
 
-/* Add to Cart Button */
+/* Hover Effect */
+.product:hover {
+    background-color: #ffffff;
+}
+
+/* Button Styling */
 .product button {
     background-color: #4CAF50;
     color: white;
@@ -201,15 +128,94 @@ form input[type="submit"]:hover {
     border: none;
     border-radius: 5px;
     margin: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-/* Display Price and Button Vertically */
-.product p, .product button {
-    display: block;
+.product button:hover {
+    background-color: #45A049;
 }
- .h1{
+
+
+/* Contact Information Section Styles */
+.contact-info {
+	background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Contact Method Styles */
+.contact-method {
+    background-color: #ddd;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+/* Social Media Links Styles */
+
+.contact-method ul li a {
+    color: light blue; 
+}
+/* Social Media Links Hover Effect */
+.contact-method ul li a:hover {
+    color: #007BFF; 
+}
+
+/* Login Form Section Styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+/* Form Field Styles */
+form label {
+    display: block;
+    margin: 10px;
+}
+
+form input {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* Login Button Styles */
+.login-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+    opacity: .5
+}
+
+.login-btn:hover {
+    background-color: #45A049;
+    opacity: 1.0
+}
+
+/* Signup Link Styles */
+.signup-link {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+.h1{
     text-align: center;
  }
 
@@ -231,7 +237,7 @@ form input[type="submit"]:hover {
 }
 
 .message-box {
-    border: 2px solid black;
+    border: 2px;
     background-color: #f9f9f9;
     padding: 10px;
     margin: 20px;
@@ -245,8 +251,6 @@ form input[type="submit"]:hover {
 .signup-link:hover {
     text-decoration: underline;
 }
-
-
 
 .signup-form-section {
     background-color: #ddd;
@@ -286,5 +290,4 @@ form input[type="submit"]:hover {
     background-color: #45A049;
     opacity: 1.0;
 }
-
 

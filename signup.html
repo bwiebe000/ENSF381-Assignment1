@@ -1,3 +1,13 @@
+<!-- signup.html -->
+<!--
+=========================================================
+Name        : signup.html
+Assignment  : Assignment 3
+Author(s)   : Brayden Wiebe, Nader Naboulsi
+Submission  : March 11, 2024
+Description : page to signup to our webpage
+=========================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +17,20 @@
     <title>Product Listing</title>
 </head>
 <body>
-<header>
-    <img src="./images/2079333.webp" alt="Website Logo" height="400" width="400">
-    <h1>TEZNA</h1>
-</header>
-<div class="div">
-    <a href="./index.html">Home</a>
-    <a href="./products.html">Products</a><br>
-    <a href="./contact.html">Contacts</a><br>
-    <a href="./login.html">Login</a><br>
-</div>
-
+    <header class="header">
+        <div>
+            <img src="./images/2079333.webp" alt="Website Logo" height="400" width="400">
+        </div>
+        <div class="company-name">
+            TEZNA
+        </div>
+    </header>
+    <nav>
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./products.html" class="nav-link">Products</a>
+        <a href="./contact.html" class="nav-link">Contacts</a>
+        <a href="./login.html" class="nav-link">Login</a>
+    </nav>
     <main class="main-content">
         <section class="signup-form-section">
             <form id="signupForm" class="signup-form">
@@ -43,7 +56,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2024 Companyco. All rights reserved.</p>
+        &copy; 2024 TEZNA. All rights reserved.
     </footer>
 
     <script>
