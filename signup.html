@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+</head>
+<body>
+<header>
+    <img src="./images/2079333.webp" alt="Website Logo" height="400" width="400">
+    <h1>TEZNA</h1>
+</header>
+<div class="div">
+    <a href="./index.html">Home</a>
+    <a href="./products.html">Products</a><br>
+    <a href="./contact.html">Contacts</a><br>
+    <a href="./login.html">Login</a><br>
+</div>
+
+    <main class="main-content">
+        <section class="signup-form-section">
+            <form id="signupForm" class="signup-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"  required placeholder="Enter your username">
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"  required placeholder="Enter your password">
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" required placeholder="Confirm your password">
+
+                <label for="email">Email:</label>
+                <input id="email" name="email" required placeholder="Enter your email">
+
+                <button type="submit" class="signup-btn">Signup</button>
+            </form>
+            
+        </section>
+        <div id="message-box" class="message-box" style="display: none;">
+            <p></p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Companyco. All rights reserved.</p>
+    </footer>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('signupForm');
+    const messageBox = document.getElementById('message-box');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        messageBox.innerHTML = '';
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const confirmPassword = document.getElementById('confirmPassword').value;
+        const email = document.getElementById('email').value;
+
+        let hasErrors = false;
+
+        
+        if (!/^[A-Za-z][A-Za-z0-9_-]{2,19}$/.test(username)) {
+            addErrorMessage('Check the Username.');
+            hasErrors = true;
+        }
+
+        
+        if (!/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+[\]{}|;:'",.<>?/`~]).{8,}/.test(password)) {
+            addErrorMessage('Password is invalid.');
+            hasErrors = true;
+        }
+
+        
+        if (password !== confirmPassword) {
+            addErrorMessage("Password doesn't match.");
+            hasErrors = true;
+        }
+
+        
+        if (!/^\S+@\S+\.\S+$/.test(email)) {
+            addErrorMessage('Check the Email.');
+            hasErrors = true;
+        }
+
+        if (!hasErrors) {
+            addSuccessMessage('Signup successful!');
+        }
+
+        function addErrorMessage(message) {
+            const errorP = document.createElement('p');
+            errorP.textContent = message;
+            
+            messageBox.appendChild(errorP);
+        }
+
+        function addSuccessMessage(message) {
+            const successP = document.createElement('p');
+            successP.textContent = message;
+            
+            messageBox.appendChild(successP);
+        }
+        
+        messageBox.style.display = 'block';
+        messageBox.style.backgroundColor ='#f9f9f9';
+        messageBox.style.border='2px';
+        messageBox.style.padding='10px';
+        messageBox.style.margin='20px';
+        messageBox.style.borderRadius='5px';
+    });
+});
+
+
+    </script>
+</body>
+</html>
