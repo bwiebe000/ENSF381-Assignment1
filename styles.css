@@ -229,3 +229,55 @@ form input[type="submit"]:hover {
 .remove-button:hover {
     background-color: #ff0000;
 }
+.signup-link {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+
+
+.signup-form-section {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form label {
+    display: block;
+    margin: 10px;
+}
+
+.signup-form input {
+    background-color: #fff;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+   
+    box-sizing: border-box; 
+}
+
+.signup-btn {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    border: none;
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+
